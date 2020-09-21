@@ -4,13 +4,13 @@
 	<groupId>in.javahome</groupId>
 	<artifactId>simple-app</artifactId>
 	<packaging>war</packaging>
-	<version>3.0.0-SNAPSHOT</version>
+	<version>3.0.0</version>
 	<name>simple-app</name>
 	<url>http://maven.apache.org</url>
-	
+
 	<dependencies>
 
-		
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -19,5 +19,5 @@
 		</dependency>
 
 	</dependencies>
-	
+
 </project>
