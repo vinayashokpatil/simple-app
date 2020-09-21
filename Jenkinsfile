@@ -24,10 +24,10 @@ pipeline {
                       /* click on snippet generator -> sh:Shell Script -> type "mvn clean package" -> Generate pipeline script */
                       /* copy paste below as shows sh 'mvn clean package' */
                          sh 'mvn clean package'
-                   }
-
-                stage('Upload War to Nexus'){
-                       steps{
+                        }
+                     }
+                     stage('Upload War to Nexus'){
+                         steps{
 
                               nexusArtifactUploader artifacts: [
                                  [
@@ -47,13 +47,9 @@ pipeline {
 
                        }
 
-
+                }
 
 
                }
 
           }
-
-
-
-}
