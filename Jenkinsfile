@@ -47,9 +47,33 @@ pipeline {
                                   repository: 'simple-app2',
                                   version: '3.0.0'
 
-                       }
+                     }
 
                 }
+              Stage('Run the ansible playbook to copy file from nexus'){
+                steps{
+                        sshPublisher(
+                         publishers:
+                          [sshPublisherDesc(
+                            configName: 'ansible_controller_instance',
+                            transfers: [
+                              sshTransfer(
+                               cleanRemote: false,
+                               excludes: '',
+                               execCommand: 'ansible-playbook /opt/playbooks/copywarfilefromnexustocontroller.yaml -i hosts',
+                               execTimeout: 120000,
+                               flatten: false,
+                               makeEmptyDirs: false,
+                               noDefaultExcludes: false,
+                               patternSeparator: '[, ]+',
+                               remoteDirectory: '//opt/playbooks',
+                               remoteDirectorySDF: false,
+                               removePrefix: '',
+                               sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+
+                }
+
+              }
 
 
                }
