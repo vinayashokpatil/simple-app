@@ -60,7 +60,7 @@ pipeline {
                               sshTransfer(
                                cleanRemote: false,
                                excludes: '',
-                               execCommand: 'ansible-playbook /opt/playbooks/copywarfilefromnexustocontroller.yaml -i hosts',
+                               execCommand: 'ansible-playbook /opt/playbooks/copywarfilefromnexustocontroller.yaml -i /opt/playbooks/hosts',
                                execTimeout: 120000,
                                flatten: false,
                                makeEmptyDirs: false,
