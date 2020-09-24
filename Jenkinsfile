@@ -26,8 +26,8 @@ pipeline {
                          sh 'mvn clean package'
                         }
                      }
-                     stage('Upload War to Nexus'){
-                         steps{
+               stage('Upload War to Nexus'){
+                   steps{
 
                               nexusArtifactUploader artifacts: [
                                  [
