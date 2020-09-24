@@ -16,7 +16,8 @@ pipeline {
           environment {
             MAVEN_OPTS = ' -Dmaven.test.failure.ignore=false'
            }
-          stages{
+
+              stages{
                /* generally there are 3 stages, 1. 'Git Checkout' - pull out code from github or any scm */
                /* then stage 2 : Build using maven and then stage 3 : */
 
