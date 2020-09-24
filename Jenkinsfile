@@ -50,8 +50,8 @@ pipeline {
                      }
 
                 }
-              Stage('Run the ansible playbook to copy file from nexus'){
-                steps{
+               stage('Run the ansible playbook to copy file from nexus'){
+                 steps{
                         sshPublisher(
                          publishers:
                           [sshPublisherDesc(
