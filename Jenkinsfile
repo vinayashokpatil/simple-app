@@ -48,6 +48,8 @@ pipeline {
                                   repository: 'simple-app2',
                                   version: '3.0.0'
 
+
+
                      }
 
                 }
